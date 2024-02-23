@@ -8,20 +8,19 @@ import java.io.FileWriter;
 public class Ribossomo {
 
     /*
-     * Autor: Mateus José da Silva n° 23
-     * 
      * Input: Fita de RNA mensageiro (RNAm) e Código Genético
      * Output: Cadeia de aminoácido
      * Teste: AUG.UGC.AAG.UCU.AGU.GAG.AAG.GUU.UAU.UUG.ACA.AAG.CAA.GAG.AUC.ACG.AUC.CAU.GUC.GGC.UUA.UAG
      * Fonte usada para encontrar as siglas dos aminoacidos: http://labs.icb.ufmg.br/lbcd/grupo4/simbol.html
-     */
+    */
 
     public static void main(String[] args) {
 
         try {
+
             String RNA, cadeia = "";
             BufferedReader entrada = new BufferedReader(
-                    new FileReader("src//com//mateussilva//java//main//entrada(Ribossomo).txt"));
+                    new FileReader("ribossomo//src//com//mateussilva//resources//entrada(ribossomo).txt"));
             RNA = entrada.readLine();
             entrada.close();
 
@@ -41,7 +40,7 @@ public class Ribossomo {
             }
 
             BufferedWriter saida = new BufferedWriter(
-                    new FileWriter("src//com//mateussilva//java//main//saida(Ribossomo)-Mateus_Jose_da_Silva.txt"));
+                    new FileWriter("ribossomo//src//com//mateussilva//resources//saida(ribossomo).txt"));
             saida.write(cadeia);
             saida.close();
         } catch (Exception e1) {
